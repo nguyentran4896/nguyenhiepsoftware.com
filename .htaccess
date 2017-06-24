@@ -1,4 +1,4 @@
 
 # BEGIN WordPress
-
+web: vendor/bin/heroku-php-apache2
 # END WordPress
