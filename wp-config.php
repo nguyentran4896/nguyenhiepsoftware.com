@@ -19,6 +19,8 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
+$url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
+
 /** The name of the database for WordPress */
 define('DB_NAME', 'nguyen_firstwordpress');
 
@@ -29,7 +31,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', trim($url['http://wordpress48.herokuapp.com']);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
