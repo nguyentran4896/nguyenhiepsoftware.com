@@ -1,4 +1,12 @@
 
 # BEGIN WordPress
-web: vendor/bin/heroku-php-apache2
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /nguyenhiepsoftware/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /nguyenhiepsoftware/index.php [L]
+</IfModule>
+
 # END WordPress
